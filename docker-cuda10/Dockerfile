@@ -7,6 +7,8 @@ RUN wget https://github.com/alicevision/meshroom/releases/download/v2018.1.0/Mes
     mv Meshroom-2018.1.0/aliceVision /opt/aliceVision;\
     rm Meshroom-2018.1.0-linux.tar.gz;\
     rm -r Meshroom-2018.1.0
+    
+RUN cat "Google;Google Pixel 3a;7.96" >> /opt/aliceVision/share/aliceVision/cameraSensors.db    
 ENV PATH="/opt/aliceVision/bin:${PATH}"
 
 CMD ["make"]
