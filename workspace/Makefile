@@ -35,7 +35,7 @@ meshroom: $(CACHE_DIR) $(IMAGE_DIR)
 		--cache $(CACHE_DIR)
 
 $(IMAGE_DIR):
-	cat "Google;Google Pixel 3a;7.96" >> /opt/aliceVision/share/aliceVision/cameraSensors.db
+	echo 'Google;Google Pixel 3a;7.96' >> /opt/aliceVision/share/aliceVision/cameraSensors.db
 	wget -nv "$(IMAGE_ZIP)" -O $(UNZIP_DIR).zip
 	unzip $(UNZIP_DIR).zip -d $(UNZIP_DIR)
 	rm $(UNZIP_DIR).zip
